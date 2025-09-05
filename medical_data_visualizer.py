@@ -23,7 +23,7 @@ df["gluc"] = (df["gluc"] > 1).astype(int)
 # 4
 def draw_cat_plot():
     # 5
-    # Chama as categorias
+    # Chama as categorias do catplot
     df_cat = pd.melt(
         df,
         id_vars=["cardio"],
@@ -46,7 +46,10 @@ def draw_cat_plot():
         y="total",
         hue="value",
         col="cardio",
-        kind="bar"
+        kind="bar",
+        palette="Set2",     #muda as cores
+        saturation=0.9,      #saturaçao das cores
+        height=4, aspect=1    #tamanho do catplot
     )
 
     # 8
