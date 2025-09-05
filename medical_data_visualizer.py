@@ -96,7 +96,8 @@ def draw_heat_map():
         center=0,
         linewidths=0.5,
         cbar_kws={"shrink": 0.5},
-        ax=ax
+        ax=ax,
+        cmap="magma"         # cores do mapa de calor
     )
 
     # 16
